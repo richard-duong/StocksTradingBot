@@ -1,0 +1,4 @@
+certifi==2022.6.15
+polygon-api-client==1.0.2
+urllib3==1.26.9
+websockets==10.3
