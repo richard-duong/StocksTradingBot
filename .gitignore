@@ -1,6 +1,6 @@
-# Virtual environment and secrets file
-venv/
-.env
+venv/ 	# Virtual Environment
+.env	# Secrets File
+mocks/	# Mock testing directory
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
