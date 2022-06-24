@@ -2,11 +2,13 @@ import os
 from dotenv import load_dotenv
 from polygon import RESTClient
 
-ENV_KEY = "POLYGON_API_KEY"
+ENV_KEY='POLYGON_API_KEY'
+load_dotenv()
 
 class FreeStockBot:
 	# static class client (is this multithread safe?)	
-	__secret = str(os.environ.get(ENV_KEY))
+	__secret = os.environ.get(ENV_KEY)
+	print(__secret)
 	client = RESTClient(api_key = __secret)
 
 	# not sure what to put here yet
@@ -15,4 +17,4 @@ class FreeStockBot:
 		
 class StarterStockBot(FreeStockBot):
 	def __init__(self):
-		FreeStockBot.__init__()
+		super().__init__()
